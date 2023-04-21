@@ -1,5 +1,20 @@
 # Gift List
 
+## Description
+
+This project is aimed at practical blockchain development. We use Merkle Trees and cryptography to authenticate a user using proof verification on the server. If the user is on the list, a gift is given. Otherwise not.
+It consists of a client and server architecture where the server is instantiated by typing: node server/index.js from the command line. Similarly, the client can be started by typing: node client/index.js (also from the command line in another terminal tab).
+
+This starts a process, first in the client generating names and proofs that will be sent for verification... 
+The following attempts were made:
+
+- A name which is not in the list.
+- A name which is on the list, with a proof that does not verify.
+- A name which is on the list with a valid proof.
+
+The list of names is in utils/niceList.json and utils/MerkleTree.js contains the implementation of the Merkle Tree. Instead of storing the whole list, we only store this Merkle tree's root (which is a hash), thus saving valuable space on the blockchain!
+
+
 To get started with the repository, clone it and then run `npm install` in the top-level directory to install the depedencies.
 
 There are three folders in this repository:
